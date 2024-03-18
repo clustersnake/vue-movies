@@ -2,7 +2,6 @@
 import { onMounted } from 'vue'
 import { useMovieService } from '@/composables/services'
 import { useSessionStore } from '@/stores/session'
-import type { Genre } from '@/types'
 
 const { genres, getGenres } = useMovieService()
 const { selectGenre } = useSessionStore()
@@ -12,19 +11,18 @@ onMounted(async () => {
 })
 
 const click = (evt: Event) => {
-  console.log(evt.target.value)
-  selectGenre(evt?.target?.value)
+  const target= evt.target as HTMLInputElement 
+  selectGenre(target.value)
 }
 </script>
 <template>
   <section>
-    
-    <!-- <label for="genres">Genre: </label>
+    <label for="genres">Genre: </label>
     <select id="genres" name="genres" class="text-black mb-2" @change="click">
       <option v-for="genre in genres?.genres" :value="genre.id" :key="genre.id">
         {{ genre.name }}
       </option>
-    </select> -->
+    </select>
   </section>
 </template>
 

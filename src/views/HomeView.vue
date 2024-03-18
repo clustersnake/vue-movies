@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
 import MovieGenreSelector from '@/components/MovieGenreSelector.vue'
-import { onMounted, onUpdated, watch } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useMovieService } from '@/composables/services'
 import { useUrlHelper } from '@/composables/utils'
 import { useSessionStore } from '@/stores/session'
