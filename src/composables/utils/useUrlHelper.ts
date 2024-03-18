@@ -4,7 +4,7 @@ export default function useUrlHelper() {
 
   const headers = { Authorization: bearer }
 
-  const urlBuilder = (domain: string, prefix = '', genre= '') => {
+  const urlBuilder = (domain: string, prefix = '', genre = '') => {
     return `${env.VITE_API_ENDPOINT}/${prefix}/${domain}?with_genres=${genre}`
   }
 
