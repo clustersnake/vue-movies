@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS HEX */
+:root {
+  --caf-noir: #3e2300ff;
+  --turquoise: #5ce4d4ff;
+  --burnt-sienna: #d26d58ff;
+  --midnight-green: #004343ff;
+  --gunmetal: #00282dff;
+}
+
+/* CSS HSL */
+/* --caf-noir: hsla(34, 100%, 12%, 1); */
+/* --turquoise: hsla(173, 72%, 63%, 1); */
+/* --burnt-sienna: hsla(10, 58%, 58%, 1); */
+/* --midnight-green: hsla(180, 100%, 13%, 1); */
+/* --gunmetal: hsla(187, 100%, 9%, 1); */
+
+/* /1* SCSS HEX *1/ */
+/* $caf-noir: #3e2300ff; */
+/* $turquoise: #5ce4d4ff; */
+/* $burnt-sienna: #d26d58ff; */
+/* $midnight-green: #004343ff; */
+/* $gunmetal: #00282dff; */
+
+/* /1* SCSS HSL *1/ */
+/* $caf-noir: hsla(34, 100%, 12%, 1); */
+/* $turquoise: hsla(173, 72%, 63%, 1); */
+/* $burnt-sienna: hsla(10, 58%, 58%, 1); */
+/* $midnight-green: hsla(180, 100%, 13%, 1); */
+/* $gunmetal: hsla(187, 100%, 9%, 1); */
+
+/* /1* SCSS RGB *1/ */
+/* $caf-noir: rgba(62, 35, 0, 1); */
+/* $turquoise: rgba(92, 228, 212, 1); */
+/* $burnt-sienna: rgba(210, 109, 88, 1); */
+/* $midnight-green: rgba(0, 67, 67, 1); */
+/* $gunmetal: rgba(0, 40, 45, 1); */
+
+/* /1* SCSS Gradient *1/ */
+/* $gradient-top: linear-gradient(0deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-right: linear-gradient(90deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-bottom: linear-gradient(180deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-left: linear-gradient(270deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-top-right: linear-gradient(45deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-bottom-right: linear-gradient( */
+/*   135deg, */
+/*   #3e2300ff, */
+/*   #5ce4d4ff, */
+/*   #d26d58ff, */
+/*   #004343ff, */
+/*   #00282dff */
+/* ); */
+/* $gradient-top-left: linear-gradient(225deg, #3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+/* $gradient-bottom-left: linear-gradient( */
+/*   315deg, */
+/*   #3e2300ff, */
+/*   #5ce4d4ff, */
+/*   #d26d58ff, */
+/*   #004343ff, */
+/*   #00282dff */
+/* ); */
+/* $gradient-radial: radial-gradient(#3e2300ff, #5ce4d4ff, #d26d58ff, #004343ff, #00282dff); */
+
+main {
+  background-color: var(--gunmetal);
+  color: white;
+}
