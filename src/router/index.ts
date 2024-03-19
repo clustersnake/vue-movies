@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import {useSessionStore} from '@/stores';
 import HomeView from '../views/HomeView.vue'
+import layouts from '@/layouts';
 
 
 const router = createRouter({
@@ -11,6 +12,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
+        layout: 'MainLayout',
         requiresAuth: true
       },
     },
@@ -19,6 +21,7 @@ const router = createRouter({
       name: 'movieDetails',
       component: () => import('../views/MovieView.vue'),
       meta: {
+        layout: 'MainLayout',
         requiresAuth: true
       },
     },
@@ -30,6 +33,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
       meta: {
+        layout: 'MainLayout',
         requiresAuth: true
       },
     },
@@ -41,6 +45,7 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/LoginView.vue'),
       meta: {
+        layout: 'PlainLayout',
         requiresAuth: false
       },
     }
@@ -60,6 +65,12 @@ router.beforeEach((to) => {
     }
 
   }
+})
+router.afterEach((to:any) => {
+  console.log('afterEach');
+  const store = useSessionStore();
+
+  store.setLayout(to.meta.layout)
 })
 
 export default router
