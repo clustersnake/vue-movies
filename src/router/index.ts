@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import {useSessionStore} from '@/stores';
+import { useSessionStore } from '@/stores'
 import HomeView from '../views/HomeView.vue'
-import layouts from '@/layouts';
-
+import layouts from '@/layouts'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +13,7 @@ const router = createRouter({
       meta: {
         layout: 'MainLayout',
         requiresAuth: true
-      },
+      }
     },
     {
       path: '/movies/:id',
@@ -23,7 +22,7 @@ const router = createRouter({
       meta: {
         layout: 'MainLayout',
         requiresAuth: true
-      },
+      }
     },
     {
       path: '/about',
@@ -35,7 +34,7 @@ const router = createRouter({
       meta: {
         layout: 'MainLayout',
         requiresAuth: true
-      },
+      }
     },
     {
       path: '/login',
@@ -47,28 +46,27 @@ const router = createRouter({
       meta: {
         layout: 'PlainLayout',
         requiresAuth: false
-      },
+      }
     }
   ]
 })
 
 router.beforeEach((to) => {
-  console.log(to);
-  const sessionStore = useSessionStore();
+  console.log(to)
+  const sessionStore = useSessionStore()
 
-  if(to.meta.requiresAuth && !sessionStore.userData.authenticated){
-    console.log('not authenticated');
- return {
+  if (to.meta.requiresAuth && !sessionStore.userData.authenticated) {
+    console.log('not authenticated')
+    return {
       path: '/login',
       // save the location we were at to come back later
-      query: { redirect: to.fullPath },
+      query: { redirect: to.fullPath }
     }
-
   }
 })
-router.afterEach((to:any) => {
-  console.log('afterEach');
-  const store = useSessionStore();
+router.afterEach((to: any) => {
+  console.log('afterEach')
+  const store = useSessionStore()
 
   store.setLayout(to.meta.layout)
 })

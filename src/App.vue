@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { RouterView, } from 'vue-router'
-import {useSessionStore} from '@/stores';
-const store = useSessionStore();
-
+import { RouterView } from 'vue-router'
+import { useSessionStore } from '@/stores'
+const store = useSessionStore()
 </script>
 
 <template>
@@ -11,5 +10,4 @@ const store = useSessionStore();
   </component>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

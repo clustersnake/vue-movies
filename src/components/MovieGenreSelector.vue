@@ -11,7 +11,7 @@ onMounted(async () => {
 })
 
 const click = (evt: Event) => {
-  const target= evt.target as HTMLInputElement 
+  const target = evt.target as HTMLInputElement
   selectGenre(target.value)
 }
 </script>

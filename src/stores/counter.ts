@@ -11,4 +11,4 @@ const useCounterStore = defineStore('counter', () => {
   return { count, doubleCount, increment }
 })
 
-export default useCounterStore;
+export default useCounterStore

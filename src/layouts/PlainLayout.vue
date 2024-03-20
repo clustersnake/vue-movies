@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section class="h-screen container mx-auto flex flex-col justify-center items-center">
@@ -7,5 +6,4 @@
   </section>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
