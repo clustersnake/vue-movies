@@ -1,11 +1,12 @@
 import { ref, shallowRef, reactive } from 'vue'
 import { defineStore } from 'pinia'
 import { useRoute, useRouter } from 'vue-router'
+import type {Component} from 'vue';
 import layouts from '@/layouts'
 
 export const useSessionStore = defineStore('session', () => {
   const genre = ref('')
-  const layout = shallowRef(layouts['PlainLayout'])
+  const layout = shallowRef<Component | null>(null)
   const userData = reactive({
     email: '',
     authenticated: false
@@ -26,7 +27,7 @@ export const useSessionStore = defineStore('session', () => {
     layout.value = layouts['PlainLayout']
   }
   const setLayout = (l: string) => {
-    layout.value = layouts[l]
+    layout.value = layouts[l as keyof typeof layouts]
   }
 
   function selectGenre(id: string) {
