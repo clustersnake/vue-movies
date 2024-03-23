@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MovieGenreSelector from '@/components/MovieGenreSelector.vue'
-import { onBeforeMount, watch } from 'vue'
+import { watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useMovieService } from '@/composables/services'
 import { useUrlHelper } from '@/composables/utils'
@@ -11,7 +11,7 @@ const { getImageUrl } = useUrlHelper()
 const session = useSessionStore()
 const { genre } = storeToRefs(session)
 
-getMovies(session.genre);
+getMovies(session.genre)
 
 watch(genre, () => {
   getMovies(session.genre)

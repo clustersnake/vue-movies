@@ -5,8 +5,6 @@ import { useUrlHelper } from '@/composables/utils'
 const useMovieService = (): MovieService => {
   const { headers, urlBuilder } = useUrlHelper()
 
-  const gen = ref<Array<string>>([])
-
   const movies = ref<MovieResponse>()
   const genres = ref<GenreResponse>()
 

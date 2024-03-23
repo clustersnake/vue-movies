@@ -1,7 +1,7 @@
 import { ref, shallowRef, reactive } from 'vue'
 import { defineStore } from 'pinia'
 import { useRoute, useRouter } from 'vue-router'
-import type {Component} from 'vue';
+import type { Component } from 'vue'
 import layouts from '@/layouts'
 
 export const useSessionStore = defineStore('session', () => {
