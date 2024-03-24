@@ -1,1 +1,1 @@
-export { default as useMovieService } from './useMovieService'
+export { default as useMovieService } from './movieService'
