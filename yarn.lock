@@ -1698,6 +1698,11 @@ keyv@^4.5.3:
   dependencies:
     json-buffer "3.0.1"
 
+kutty@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/kutty/-/kutty-0.6.0.tgz#7ec19722bfbe58c1dc546821d71d148e1e7590c8"
+  integrity sha512-QI4qt0aDMG05BH845B16u9Fun5tBfpNcD89Yky4suU5iwmu5P3xPEcoRSDl9E7/WU5kfjuzTK1XzStglkd3Msg==
+
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
