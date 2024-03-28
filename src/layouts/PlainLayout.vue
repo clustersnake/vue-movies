@@ -1,7 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="h-screen container mx-auto flex flex-col justify-center items-center">
+  <!-- <section class="h-screen container mx-auto flex flex-col justify-center items-center">
+    <slot />
+  </section> -->
+  <section>
     <slot />
   </section>
 </template>
