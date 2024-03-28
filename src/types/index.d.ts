@@ -1,3 +1,3 @@
-export {Genre, GenreResponse}  from './genre.d'
-export { Movi, MovieResponse } from './movi'
-export { MovieService, GenreResponse } from './service'
+export { Genre, GenreResponse } from './genre'
+export { Movi, MovieResponse } from './movie'
+export { MovieService } from './service'
